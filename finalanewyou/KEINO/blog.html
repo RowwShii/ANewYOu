@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="blog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <nav class="navbar">
+    <a href="homepage.html" class="navbar-logo">
+        <img src="images/ANewYOU_Official Logo (COLOR VER TRANSPARENT).png" alt="Logo" />
+    </a>
+    <div class="navbar-actions">
+        <div class="navbar-panel">
+            <a href="homepage.html" class="nav-link">
+                <img src="images/HOME.png" alt="Home" class="nav-icon" />
+            </a>
+            <a href="aboutus.html" class="nav-link">
+                <img src="images/ABOUT US.png" alt="About" class="nav-icon" />
+            </a>
+            <a href="service.html" class="nav-link">
+                <img src="images/SERVICES.png" alt="Service" class="nav-icon" />
+            </a>
+            <a href="blog.html" class="nav-link active">
+                <img src="images/BLAGPEGE.png" alt="Blog" class="nav-icon" />
+            </a>
+        </div>
+        <a href="booknow.html" class="book-now-btn">Book now!</a>
+    </div>
+</nav>
+
+
+<div class="section-1">
+    <div class="slider">
+        <div class="slides">
+            <img src="images/blog1.jpg" class="slide-img" alt="Slide 1" />
+            <img src="images/blog2.jpg" class="slide-img" alt="Slide 2" />
+            <img src="images/blog3.jpg" class="slide-img" alt="Slide 3" />
+        </div>
+         <div class="slider-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide-img');
+const slidesContainer = document.querySelector('.slides');
+const totalSlides = slides.length;
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+  if (index < 0) currentSlide = totalSlides - 1;
+  else if (index >= totalSlides) currentSlide = 0;
+  else currentSlide = index;
+  slidesContainer.style.transform = `translateX(-${currentSlide * 100}vw)`;
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentSlide);
+  });
+}
+
+dots.forEach((dot, i) => {
+  dot.onclick = () => showSlide(i);
+});
+
+setInterval(() => showSlide(currentSlide + 1), 5000);
+
+showSlide(0);
+</script>
+
+<hr class="section-separator">
+
+<div class="section-2">
+    <h2 class="past-blogs-title">Blog Page</h2>
+    <div class="past-blogs-grid">
+        <a href="https://www.gmanetwork.com/news/lifestyle/healthandwellness/943137/philippines-mental-health-quotient-worsens-in-2024-study/story/" class="blog-card">
+            <img src="images/blog1.jpg" alt="Blog 1" class="blog-card-img" />
+            <div class="blog-card-desc">Another look at mental health</div>
+        </a>
+        <a href="https://mb.com.ph/2025/06/08/another-look-at-mental-health" class="blog-card">
+            <img src="images/blog2.jpg" alt="Blog 2" class="blog-card-img" />
+            <div class="blog-card-desc">Young people's mental health is finally
+                getting the attention it needs.
+            </div>
+        </a>
+        <a href="https://www.nature.com/articles/d41586-021-02690-5?fbclid=IwY2xjawK3OLhleHRuA2FlbQIxMQABHhqZH0J3sT3KRqAN-FzJW8G1Yq4opka2A79z0CMvgonGMjhr0rrHTJp9fAGh_aem_e4Ks8x5d1v2NX0ZycH7IsA" class="blog-card">
+            <img src="images/blog3.jpg" alt="Blog 3" class="blog-card-img" />
+            <div class="blog-card-desc">Philippines' mental health quotient
+                worsens in 2024 - study.
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="section-3">
+        <div class="about-container">
+            <div class="about-details-container">
+                <h2 class="about-title">ANewYou</h2>
+                <p class="about-details">2025 Intramuros, Manila</p>
+                <p class="about-details">+63 (0)9123456789</p>
+                <p class="about-details">anewyou@gmail.com</p>
+                <p class="footer-text">&copy; 2025 ANewYou. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+</body> 
+</html>

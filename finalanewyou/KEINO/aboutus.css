@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #CCE9CC;
+  color: #333;
+  min-height: 100vh;
+  max-height: auto; 
+}
+
+/* ========== CONTENTS SA BODY ========== */
+
+/* ========== ETO YUNG SA NAVIGATION BAR ========== */
+.navbar {
+  width: 100vw;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+  padding: 0 0 0 40px; 
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.navbar-logo img { /* ETO YUNG LOGO NG WEBSITE */
+  margin-top: 7px;
+  height: 60px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+  cursor: pointer;
+  display: block;
+}
+
+.navbar-panel {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0; 
+  color: #1f5f14;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 8px 12px 4px 12px;
+  position: relative;
+  transition: color 0.2s;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+.nav-link .nav-icon { /* ETO YUNG MGA ICONS NA HOME, ABOUT US, SHOP */
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-link.active,
+.nav-link:hover { /* ETO YUNG LINYA SA ILALIM NG MGA ICON */
+  color: #cf9a64;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: #cf9a64;
+  border-radius: 2px;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: stretch; 
+  gap: 32px;
+  margin-left: auto; 
+}
+
+.book-now-btn { /* ETO YUNG BOOK NOW BUTTON */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  height: 72px;
+  line-height: 72px;
+  padding: 0 64px 0 80px; 
+  background: linear-gradient(90deg, #e6d572 0%, #f64f4f 100%);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%); /* PARA SA SHAPE NG BUTTON */
+  box-shadow: 0 2px 8px rgba(86, 171, 145, 0.12);
+  transition: background 0.2s, color 0.2s;
+  margin: 0;
+  vertical-align: middle;
+  align-self: stretch;
+}
+
+.book-now-btn:hover { /* ETO YUNG KAPAG NAKA LAGAY YUNG CURSOR SA BOOK NOW BUTTON */
+  background: linear-gradient(90deg, #56ab91 0%, #ffe066 100%);
+  color: #1f5f14;
+}
+
+/* ======================= SECTION 1 ======================= */
+
+.section-1 {
+  height: 45vh;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFC5;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.aboutus-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 16px 32px 16px;
+}
+
+.aboutus-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 58px;
+}
+
+.aboutus-desc {
+  font-size: 15px;
+  color: #000000;
+  max-width: 110%;
+  text-align: center;
+  line-height: 2.5;
+  margin: 0 auto;
+}
+
+/* ======================= BROKEN LINES ======================= */
+
+.section-separator {
+  border: none;
+  border-top: 2px dashed rgba(242, 107, 51, 0.75); 
+  width: 100%;
+  margin: 0px auto;
+  
+}
+
+/* ======================= SECTION 2 ======================= */
+
+.section-2 {
+  height: auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #CCE9CC;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px 0; 
+}
+
+.welcome-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1500px;
+  margin: 48px auto 48px auto;
+  gap: 40px;
+  width: 80%;
+}
+
+.welcome-illustration {
+  max-width: 500px;
+  width: 100%;
+  height: 400px;
+  border-radius: 24px; 
+}
+
+.welcome-box {
+  border-radius: 24px;
+  padding: 40px 32px;
+  max-width: 780px;
+  width: 40%;
+  text-align: center;
+}
+
+.welcome-box h2 {
+  margin-bottom: 18px;
+  font-size: 5rem;
+  color: #000000;
+}
+
+.welcome-box p {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+
+/* ======================= SECTION 3 ======================= */
+
+.section-3 {  
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #CCE9CC;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.features-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 48px auto 48px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.feature-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #000000;
+}
+
+.feature-circle {
+  width: 110px;
+  height: 110px;
+  background: #FFFFC5;
+  border-radius: 50%;
+  display: flex;;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.feature-img {
+  width: 90px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+}
+
+.feature-desc {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.features-quote {
+  margin-top: 32px;
+  font-size: 1.2rem;
+  color: #000000;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ======================= SECTION 4 ======================= */
+
+.section-4 {
+  height: 3vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: #000000;
+  background-color: #69d969;
+  padding: 20px; 
+}
+
+.about-container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%; 
+  max-width: 800px; 
+}
+
+.about-title {
+  font-family: 'Cinzel', serif;
+  font-size: 20px; 
+  font-weight: 700; 
+  margin-bottom: auto; 
+}
+
+.about-details-container {
+  display: flex; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+}
+
+.about-details {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 12px; 
+  margin: auto; 
+}
+
+.footer-text {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 12px; 
+  color: #000000; 
+  margin: auto;
+}

@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #CCE9CC;
+  color: #333;
+  min-height: 100vh;
+  max-height: auto; 
+}
+
+/* ========== CONTENTS SA BODY ========== */
+
+/* ========== ETO YUNG SA NAVIGATION BAR ========== */
+.navbar {
+  width: 100vw;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+  padding: 0 0 0 40px; 
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.navbar-logo img { /* ETO YUNG LOGO NG WEBSITE */
+  margin-top: 7px;
+  height: 60px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+  cursor: pointer;
+  display: block;
+}
+
+.navbar-panel {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0; 
+  color: #1f5f14;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 8px 12px 4px 12px;
+  position: relative;
+  transition: color 0.2s;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+.nav-link .nav-icon { /* ETO YUNG MGA ICONS NA HOME, ABOUT US, SHOP */
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-link.active,
+.nav-link:hover { /* ETO YUNG LINYA SA ILALIM NG MGA ICON */
+  color: #cf9a64;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: #cf9a64;
+  border-radius: 2px;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: stretch; 
+  gap: 32px;
+  margin-left: auto; 
+}
+
+.book-now-btn { /* ETO YUNG BOOK NOW BUTTON */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  height: 72px;
+  line-height: 72px;
+  padding: 0 64px 0 80px; 
+  background: linear-gradient(90deg, #e6d572 0%, #f64f4f 100%);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%); /* PARA SA SHAPE NG BUTTON */
+  box-shadow: 0 2px 8px rgba(86, 171, 145, 0.12);
+  transition: background 0.2s, color 0.2s;
+  margin: 0;
+  vertical-align: middle;
+  align-self: stretch;
+}
+
+.book-now-btn:hover { /* ETO YUNG KAPAG NAKA LAGAY YUNG CURSOR SA BOOK NOW BUTTON */
+  background: linear-gradient(90deg, #56ab91 0%, #ffe066 100%);
+  color: #1f5f14;
+}
+
+/* ======================= BROKEN LINES ======================= */
+
+.section-separator {
+  border: none;
+  border-top: 2px dashed rgba(242, 107, 51, 0.75); 
+  width: 100%;
+  margin: 0px auto;
+  
+}
+
+/* ======================= SECTION 1 ======================= */
+
+.section-1 {
+  height: 90vh;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('images/listening women.jpg') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.aboutus-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 16px 32px 16px;
+  background: linear-gradient(135deg, rgba(84, 84, 84, 0.95), rgba(23, 18, 16, 0.18) 100%);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.aboutus-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.aboutus-desc {
+  font-size: 15px;
+  color: #ffffff;
+  max-width: 50%;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+/* ======================= SECTION 2 ======================= */
+
+.section-2 {
+  height: auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #CCE9CC;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px 0; 
+}
+
+.contact-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 0;
+  background: transparent;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 38px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.contact-icons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 24px;
+  width: 100%;
+  max-width: 720px;
+}
+
+.contact-icon-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 12px 12px 12px;
+  gap: 12px;
+  font-size: 1rem;
+  color: #1f5f14;
+  font-weight: 500;
+  min-height: 100px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.contact-icon-box:hover {
+  box-shadow: 0 8px 24px rgba(242,107,51,0.15);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.contact-icon-img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.contact-image-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.contact-image {
+  width: 620px;
+  height: 320px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.contact-form-col {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form-title {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.contact-form-desc {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d1d1;
+  font-size: 1rem;
+  resize: none;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border: 1.5px solid #F26B33;
+}
+
+.contact-textarea {
+  min-height: 90px;
+  max-height: 200px;
+}
+
+.contact-send-btn {
+  background: #F26B33;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-send-btn:hover {
+  background: #5e4125;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .contact-form-col {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* ======================= SECTION 3 ======================= */
+
+.section-3 {
+  height: auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #CCE9CC;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px 0; 
+}
+
+
+.footer-section {
+  background: #CCE9CC;
+  padding: 48px 0 16px 0;
+  width: 100%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 160px;
+  margin-bottom: 18px;
+}
+
+.footer-desc {
+  font-size: 1.1rem;
+  color: #000000;
+  max-width: 320px;
+  margin-bottom: 0;
+}
+
+.footer-links-container {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.footer-link-group {
+  min-width: 120px;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  color: #000000;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-link-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link-group ul li {
+  margin-bottom: 8px;
+}
+
+.footer-link-group ul li a {
+  color: #1f5f14;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.footer-link-group ul li a:hover {
+  color: #F26B33;
+}
+
+.footer-copyright {
+  text-align: center;
+  color: #606060;
+  font-size: 1rem;
+  margin-top: 32px;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+    align-items: center;
+  }
+  .footer-col {
+    align-items: center;
+  }
+  .footer-links-container {
+    justify-content: center;
+    gap: 24px;
+  }
+}
