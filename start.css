@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #CCE9CC;
+  color: #333;
+  min-height: 100vh;
+  max-height: auto; 
+}
+
+/* ========== CONTENTS SA BODY ========== */
+
+/* ========== ETO YUNG SA NAVIGATION BAR ========== */
+.navbar {
+  width: 100vw;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+  padding: 0 0 0 40px; 
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.navbar-logo img { /* ETO YUNG LOGO NG WEBSITE */
+  margin-top: 7px;
+  height: 60px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+  cursor: pointer;
+  display: block;
+}
+
+.navbar-panel {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0; 
+  color: #1f5f14;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 8px 12px 4px 12px;
+  position: relative;
+  transition: color 0.2s;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+.nav-link .nav-icon { /* ETO YUNG MGA ICONS NA HOME, ABOUT US, SHOP */
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-link.active,
+.nav-link:hover { /* ETO YUNG LINYA SA ILALIM NG MGA ICON */
+  color: #cf9a64;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: #cf9a64;
+  border-radius: 2px;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: stretch; 
+  gap: 32px;
+  margin-left: auto; 
+}
+
+.book-now-btn { /* ETO YUNG BOOK NOW BUTTON */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  height: 72px;
+  line-height: 72px;
+  padding: 0 64px 0 80px; 
+  background: linear-gradient(90deg, #e6d572 0%, #f64f4f 100%);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%); /* PARA SA SHAPE NG BUTTON */
+  box-shadow: 0 2px 8px rgba(86, 171, 145, 0.12);
+  transition: background 0.2s, color 0.2s;
+  margin: 0;
+  vertical-align: middle;
+  align-self: stretch;
+}
+
+.book-now-btn:hover { /* ETO YUNG KAPAG NAKA LAGAY YUNG CURSOR SA BOOK NOW BUTTON */
+  background: linear-gradient(90deg, #56ab91 0%, #ffe066 100%);
+  color: #1f5f14;
+}
+
+/* ======================= SECTION 1 ======================= */
+
+.section-1 {
+  height: auto;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.video-wrapper {
+  width: 100%;
+  aspect-ratio: 16/9; 
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ======================= SECTION 2 ======================= */
+
+.section-2 {
+  height: auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #CCE9CC;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px 0; 
+}
+
+.welcome-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.welcome-illustration {
+  max-width: 680px;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  margin-right: 35px; 
+  margin-left: -50px;
+}
+
+.welcome-box {
+  background: #F26B33;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 40px 32px;
+  max-width: 580px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+}
+
+.welcome-box:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(49, 18, 5, 0.6), 0 2px 8px rgba(0, 0, 0, 0.567);
+}
+
+.welcome-box h2 {
+  margin-bottom: 18px;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.welcome-box p {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 32px;
+  background: #69d969;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 24px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(242, 107, 51, 0.10);
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.learn-more-btn:hover {
+  background: #267e1a9a;
+  color: #fff;
+}
+
+/* ======================= BROKEN LINES ======================= */
+
+.section-separator {
+  border: none;
+  border-top: 2px dashed rgba(242, 107, 51, 0.75); 
+  width: 100%;
+  margin: 0px auto;
+  
+}
+
+/* ======================= SECTION 3 ======================= */
+
+.section-3 {
+  
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: #CCE9CC;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.services-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.services-title {
+  color: #000;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.service-box {
+  background: #F26B33;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 32px 16px 24px 16px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-img-panel {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  transition: filter 0.3s;
+}
+
+.service-label{
+  font-size: 1.5rem;
+}
+
+.service-label-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  height: 100%;
+  background: #3737378c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: bottom 0.4s cubic-bezier(.4,2,.6,1);
+  z-index: 2;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.service-box:hover .service-label-panel {
+  bottom: 0;
+}
+
+.service-box:hover .service-img {
+  filter: blur(2px) brightness(0.7);
+}
+
+
+.service-box:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(65, 28, 12, 0.655), 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.services-learn-more {
+  background-color: #F26B33;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/* ======================= SECTION 4 ======================= */
+
+.section-4 {
+  height: 3vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: #000000;
+  background-color: #69d969;
+  padding: 20px; 
+}
+
+.about-container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%; 
+  max-width: 800px; 
+}
+
+.about-title {
+  font-family: 'Cinzel', serif;
+  font-size: 20px; 
+  font-weight: 700; 
+  margin-bottom: auto; 
+}
+
+.about-details-container {
+  display: flex; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+}
+
+.about-details {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 12px; 
+  margin: auto; 
+}
+
+
+.footer-text {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 12px; 
+  color: #000000; 
+  margin: auto;
+}

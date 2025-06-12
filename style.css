@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: url('images/teamwork.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  min-height: 100vh; 
+  height: auto;      
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+}
+
+
+/* ========== ETO YUNG DESIGN SA FORMS ========== */
+.form-container {   /* Container ng login form (lalagyanan) */
+  background: #CCE9CC;
+  padding: 96px 72px;         
+  border-radius: 32px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;           
+  width: 100%;
+  margin: 48px 0;  
+  font-size: 1.5rem;           
+}
+
+.profile-circle { /* LAGAYAN-CONTAINER NG PROFILE PICTURE */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.profile-circle img { /* YUNG MISMONG PROFILE PICTURE */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.login-container h2 { /* ETO YUNG SA WELCOME BACK! */
+  text-align: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] { /* ETO YUNG MGA INPUTS (USERNAME, PASSWORD) */
+  width: 100%;
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  border: 2px solid #b2d8b2;
+  border-radius: 108px;
+  background: #f6fff6;
+  font-size: 1.3rem;
+  transition: border-color 0.2s;
+  outline: none;
+  
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {  /* ETO YUNG MGA BACKGROUND NG INPUTS */
+  border-color: #6fcf97;
+  background: #eaffea;
+}
+
+.form-container input::placeholder {  /* PARA SA FONT NG NAKADISPLAY NA USERNAME AT PASSWORD */
+  color: #1f5f14; 
+  font-weight: bold;
+}
+
+.form-container button[type="submit"] { /* ETO YUNG BUTTON SA LOGIN */
+  width: 100%;
+  padding: 18px 0;
+  background: linear-gradient(90deg, #6fcf97 0%, #56ab91 100%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 108px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(111, 207, 151, 0.15);
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 8px;
+}
+
+.form-container button[type="submit"]:hover { /* ETO YUNG KAPAG NILAGAY MO YUNG CURSOR SA BUTTON MAGBABAGO BACKGROUND */
+  background: linear-gradient(90deg, #56ab91 0%, #6fcf97 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* ========== YUNG MGA LOGO KATABI NG USERNAME ========== */
+
+.input-icon { 
+  position: relative;
+  width: 100%;
+}
+
+.input-icon .input-logo {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-80%);
+  height: 30px;
+  width: 30px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-icon input[type="text"] {
+  padding-left: 48px; 
+}

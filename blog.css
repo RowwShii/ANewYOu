@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #CCE9CC;
+  color: #333;
+  min-height: 100vh;
+  max-height: auto; 
+}
+
+/* ========== CONTENTS SA BODY ========== */
+
+/* ========== ETO YUNG SA NAVIGATION BAR ========== */
+.navbar {
+  width: 100vw;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+  padding: 0 0 0 40px; 
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.navbar-logo img { /* ETO YUNG LOGO NG WEBSITE */
+  margin-top: 7px;
+  height: 60px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+  cursor: pointer;
+  display: block;
+}
+
+.navbar-panel {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0; 
+  color: #1f5f14;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 8px 12px 4px 12px;
+  position: relative;
+  transition: color 0.2s;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+.nav-link .nav-icon { /* ETO YUNG MGA ICONS NA HOME, ABOUT US, SHOP */
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-link.active,
+.nav-link:hover { /* ETO YUNG LINYA SA ILALIM NG MGA ICON */
+  color: #cf9a64;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: #cf9a64;
+  border-radius: 2px;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: stretch; 
+  gap: 32px;
+  margin-left: auto; 
+}
+
+.book-now-btn { /* ETO YUNG BOOK NOW BUTTON */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  height: 72px;
+  line-height: 72px;
+  padding: 0 64px 0 80px; 
+  background: linear-gradient(90deg, #e6d572 0%, #f64f4f 100%);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%); /* PARA SA SHAPE NG BUTTON */
+  box-shadow: 0 2px 8px rgba(86, 171, 145, 0.12);
+  transition: background 0.2s, color 0.2s;
+  margin: 0;
+  vertical-align: middle;
+  align-self: stretch;
+}
+
+.book-now-btn:hover { /* ETO YUNG KAPAG NAKA LAGAY YUNG CURSOR SA BOOK NOW BUTTON */
+  background: linear-gradient(90deg, #56ab91 0%, #ffe066 100%);
+  color: #1f5f14;
+}
+
+/* ======================= BROKEN LINES ======================= */
+
+.section-separator {
+  border: none;
+  border-top: 2px dashed rgba(242, 107, 51, 0.75); 
+  width: 100%;
+  margin: 0px auto;
+  
+}
+
+/* ======================= SECTION 1 ======================= */
+
+.section-1 {
+  width: auto;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide-img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.slider-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+.slider::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 100%, rgba(0,0,0,0) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(242, 107, 51, 0.4);
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.dot.active {
+  background: #F26B33;
+  transform: scale(1.2);
+  border-color: #F26B33;
+}
+
+
+/* ======================= SECTION 2 ======================= */
+
+.section-2 {
+  height: auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #CCE9CC;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 40px 0; 
+}
+
+.past-blogs-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #000000;
+  margin-bottom: 32px;
+  margin-top: 0;
+  letter-spacing: 1px;
+}
+
+.past-blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(242, 107, 51, 0.18), 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.blog-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.blog-card-desc {
+  padding: 18px 16px;
+  font-size: 1.1rem;
+  color: #000000;
+  text-align: center;
+  background: #FFF;
+  width: 100%;
+}
+
+/* ======================= SECTION 3 ======================= */
+
+.section-3 {
+  height: 3vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: #000000;
+  background-color: #69d969;
+  padding: 20px; 
+}
+
+.about-container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%; 
+  max-width: 800px; 
+}
+
+.about-title {
+  font-family: 'Cinzel', serif;
+  font-size: 20px; 
+  font-weight: 700; 
+  margin-bottom: auto; 
+}
+
+.about-details-container {
+  display: flex; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+}
+
+.about-details {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 12px; 
+  margin: auto; 
+}
+
+
+.footer-text {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 12px; 
+  color: #000000; 
+  margin: auto;
+}
